@@ -8,10 +8,10 @@ SqlHandler::SqlHandler()
 
 bool SqlHandler::createConnection(QString username, QString password) {
     db = QSqlDatabase::addDatabase("QPSQL");
-    db.setDatabaseName("TS");
+    db.setDatabaseName(dbName);
     db.setHostName(hostName);
     db.setUserName(username);
-    db.setPassword("89535245541");
+    db.setPassword(password);
     return db.open();
 }
 
